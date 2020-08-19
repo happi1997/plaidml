@@ -169,6 +169,8 @@ def cmd_build(args, remainder):
     common_args += ['--profile={}'.format(profile_json)]
     common_args += ['--verbose_failures']
     common_args += ['--verbose_explanations']
+    common_args += ['--//plaidml:device={}'.format(env.get('PLAIDML_DEVICE', 'llvm_cpu.0')),
+                    '--//plaidml:target={}'.format(env.get('PLAIDML_TARGET', 'llvm_cpu'))]
 
     util.printf('--- :bazel: Running Build...')
     if platform.system() == 'Windows':

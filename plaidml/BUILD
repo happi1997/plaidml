@@ -36,6 +36,7 @@ plaidml_cc_library(
         "//pmlc/target/demo",
         "//pmlc/target/intel_gen",
         "//pmlc/target/x86",
+        "//pmlc/rt/vulkan",
     ],
 )
 
